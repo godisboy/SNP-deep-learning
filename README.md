@@ -1,1 +1,1 @@
-深度学习，应用于snp标记位点，用于生物育种。
+Application of deep learning to genome-enabled prediction of complex traits in animal breeding.
