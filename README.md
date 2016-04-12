@@ -1,2 +1,40 @@
-Application of deep learning to genome-enabled prediction of complex traits in animal breeding.
-===
+A Short Review of Deep Learning Neural Networks in  Predicting effects of noncoding variants Problems
+===========================
+Abstract
+------------------------
+Genome-wide prediction of complex traits has become increasingly important in animal and plant breeding,and is receiving increasing attention in human genetics.Most common approaches are tranditional machine learning methods.Machine learning 
+is an approach for prediction and classification, capable of dealing with the dimensionality problem in a computationally flexible manner. In recent years conventional machine learning techniques such as support vector machines,random forests and neural networks with a single hidden layer are limited in the complexity of the functions they can efficiently learn. These methods often require careful design of features so that patterns can be classified.DNNs have recently shown to outperform these conventional methods in some areas as they are capable of learning intermediate representations, with each layer of the network learning a slightly more abstract representation than the previous layer.
+
+A summary of related works
+---------------
+###ANN
+Predictive abilities of different ANN models varied markedly, whereas differences between data sets were small. Dimension 
+reduction methods enhanced prediction performance in all data sets, while at the same time computational cost decreased. 
+For the Holstein-Friesian bull data set, an ANN with 10 neurons in the hidden layer achieved a predictive correlation of 
+r = 0.47 for milk yield when the entire marker matrix was used. Predictive ability increased when the genomic relationship 
+matrix (r = 0.64) was used as input and was best (r = 0.67) when principal component scores of the marker genotypes were used.Similar results were found for the other traits in all data sets.Artificial neural networks are powerful machines for nonlinear genome-enabled predictions in animal breeding. However, to produce stable and high-quality outputs, variable selection methods are highly recommended,when the number of markers vastly exceeds sample size.
+
+###CNNs
+
+Deep convolutional neural networks (CNNs) are a variant of deep neural network that are specifically parameterized to take advantage of known spatial structure. They were originally developed to recognize handwritten digits in images (LeCun et al. 1998). Convolutional networks have since become the gold standard for numerous image analysis tasks (Krizhevsky
+et al. 2012; Szegedy et al. 2014). Recently, convolutional networks have been modified for use within natural language processing and text analysis by applying a one dimensional convolution temporally over a sequence (Hu et al. 2014; Zhang and LeCun 2015).So many current state-of-the-art DNA sequence expression predictors apply deep convolutional neural networks to learn functional activities of DNA sequences.
+
+**1.Basset**
+
+Basset, an open source package to apply deep CNNs to learn functional activities of DNA sequences.Basset was used to simultaneously predict the accessibility of DNA sequences in 164 cell types mapped by DNaseI-seq by the ENCODE and Epigenomics Roadmap projects (Consortium 2012; Kundaje et al. 2015). From these datasets, CNNs simultaneously learn the relevant sequence motifs and the regulatory logic with which they are combined to determine cell-specific DNA accessibility. Basset predictions for the change in accessibility between two variant alleles were far greater for GWAS SNPs that are likely to be causal relative to nearby SNPs in linkage disequilibrium with them.
+
+**2.Deepbind**
+
+DeepBind, is based on deep convolutional neural networks and can discover new patterns even when the locations of patterns within sequences are unknown—a task for which traditional neural networks require an exorbitant amount of training data.DeepBind addresses five challenges. (i) It can be applied to both microarray and sequencing data; (ii) it can learn from millions of sequences through parallel implementation on a graphics processing unit (GPU); (iii) it generalizes well across technologies, even without correcting for technology-specific biases; (iv) it can tolerate a moderate degree of noise and mislabeled training data; and (v) it can  train predictive models fully automatically, alleviating the need for careful and time-consuming hand-tuning. Importantly, a trained model can be applied and visualized in ways that are familiar to users of PWMs. We explored two downstream applications: uncovering the regulatory role of RNA binding proteins (RBPs) in alternative splicing, and analyzing disease-associated genetic variants that can affect transcription factor binding and gene expression.
+
+**3.DeepSEA**
+
+Identifying functional effects of noncoding variants is a major challenge in human genetics. To predict the noncoding -variant effects denovo from sequence, we developed a deep learning–based algorithmic framework,DeepSEA,that directly learns a regulatory sequence code from large-scale chromatin-profiling data, enabling prediction of chromatin effects of sequence alterations with single-nucleotide sensitivity. We further used this capability to improve prioritization of functional variants including expression quantitative trait loci (eQTLs) and disease-associated variants. The basic layer types in DeepSEA  model are convolution layer, pooling layer and fully connected layer.To train the model and minimize the objective function, which is defined as the sum of negative log likelihood (NLL) and regularization terms for controlling overfitting.
+
+Conclusions
+------------------
+In addition to standard feed forward DNN architectures, Recurrent Neural Networks (RNNs) are tailored to sequence prediction problems. RNNs were developed to handle time series of information such as speech signals. These networks can pass information from one time step to the next, so context information contained earlier in the sequence can be utilized later in the sequence. Bidirectional Recurrent Neural Networks (BRNNs) were later introduced to utilize information along the entire sequence . RNNs can be considered to be very deep neural nets since information may potentially be passed through many time steps. Early RNNs had problems learning when they were required to remember information over long time periods. Long Short Term Memory (LSTM) RNNs were proposed to circumvent these problems and have become widely used for sequence prediction tasks.
+RNNs might be a promissing method to identify functional effects of noncoding variants. Basic RNNs can handle arbitrary length 1-dimensional input and output sequences, but they can be modified to handle arbitrarily sized 2-dimensional (and higher) inputs and outputs. The latest area of research in neural network architectures is towards adding memory to RNNs for so called neural Turing machines and memory networks. These networks can be trained to solve problems that basic RNNs are incapable of solving, e.g.,given examples of sorted and unsorted data, learn to sort new unseen data. These architectures have not yet been applied to predict the noncoding-variant effects problems and it remains to be seen whether they will be able to succeed where simpler architectures have not.
+
+This article  gives a short non-exhaustive overview of the applications of ANN and DNNs to predict effects of noncoding variants problems. Deep learning is a rapidly evolving field which excels at problems where there are complex relationships between input features and desired outputs, problems that simpler classifiers are incapable of solving. The main strength of deep learning is the ability to easily take advantage of increases in the amount of data and computational power. One of the catalysts for the success of deep learning for speech and image recognition problems was the emergence of large datasets and sufficient computational power to process them. As more snps  data becomes available we hope that deep learning can provide similar improvements to predict complex traits problems. New deep learning architectures will only accelerate this progress.
+
