@@ -81,9 +81,7 @@ from numpy import dtype   #create a data type object
     MAE_va_best = 10.0
     MAE_tr_old = 10.0      #训练误差
     MAE_te_old = 10.0
-    MAE_1000G_old = 10.0
-    MAE_1000G_best = 10.0
-    MAE_GTEx_old = 10.0
+    
     #base_name = sys.argv[1]      # 获取第一个参数   sys.argv[ ]记录（获取）命令行参数
     outlog = open(base_name + '.log', 'w')   
     log_str = '\t'.join(map(str, ['epoch', 'MAE_va', 'MAE_va_change', 'MAE_te', 'MAE_te_change', 
