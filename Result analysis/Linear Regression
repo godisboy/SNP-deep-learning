@@ -1,0 +1,2 @@
+The samples used for training are far less than snp markers(features). So it's easily to overfit.
+ratio samples：markers = 1:5
